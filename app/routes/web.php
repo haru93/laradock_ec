@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('top', 'TestController@index');
+Route::get('top/{id}', 'TestController@show')->name('top.show');
