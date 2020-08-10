@@ -8,6 +8,12 @@ class TestController extends Controller
 {
     public function index()
     {
-        return view('top', ['tests' => 1]);
+        $tests = [(object)['id' => 1, 'title' => 'タイトル']];
+        return view('top', ['tests' => $tests]);
+    }
+
+    public function show($id)
+    {
+        return view('show', ['id' => $id]);
     }
 }
