@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 Route::get('top', 'TestController@index');
 Route::get('top/{id}', 'TestController@show')->name('top.show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
