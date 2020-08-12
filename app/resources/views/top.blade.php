@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>トップ</title>
-</head>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('TOP') }}</div>
 
-<body>
-	@foreach($tests as $test)
-	<p>{{ $test->id }}</p>
-	<a href="{{ route('top.show', ['id' => $test->id]) }}">{{ $test->title }}</a>
-	@endforeach
-</body>
-
-</html>
+                <div class="card-body">
+                    @foreach($tests as $test)
+                    <p>{{ $test->id }}</p>
+                    <a href="{{ route('top.show', ['id' => $test->id]) }}">{{ $test->title }}</a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
