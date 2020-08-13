@@ -10,7 +10,7 @@
                 <div class="card-body">
                     @foreach($tests as $test)
                     <p>{{ $test->id }}</p>
-                    <a href="{{ route('top.show', ['id' => $test->id]) }}">{{ $test->title }}</a>
+                    <p>{{ $test->title }}</p>
                     @endforeach
                 </div>
             </div>
