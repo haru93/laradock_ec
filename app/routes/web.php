@@ -17,4 +17,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'TopController@index');
-Route::get('/{id}', 'TopController@show')->name('top.show');
+Route::get('/show/{id}', 'TopController@show')->name('top.show');
+
+Route::resource('/products', 'ProductController')->only(['index']);
