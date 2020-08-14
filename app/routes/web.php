@@ -18,4 +18,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'TopController@index');
 
-Route::resource('/products', 'ProductController')->only(['index']);
+Route::resource('/products', 'ProductController')->only(['index','show']);
