@@ -2,8 +2,11 @@
 
 @section('content')
     <div class="container">
+        <p>【 {{ $category->name }} 】 カテゴリ</p>
+        <p>{{ $category->products->count() }} 件</p>
+
         <div class="row justify-content-center">
-            @foreach ($products as $product)
+            @foreach ($category->products as $product)
             <div class="col-md-4 mb-2">
                 <div class="card">
                     <div class="card-header">

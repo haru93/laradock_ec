@@ -14,6 +14,10 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('products.index') }}"><i class="fa fa-book mr-1"></i>商品一覧</a>
 					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="{{ route('categories.index') }}"><i class="fa fa-book mr-1"></i>カテゴリから探す</a>
+					</li>
 				</ul>
 
 				<!-- Right Side Of Navbar -->
