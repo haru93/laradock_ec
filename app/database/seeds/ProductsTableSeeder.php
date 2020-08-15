@@ -12,24 +12,24 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-            'name' => 'Tシャツ',
+            'name' => 'GreenColorShirt',
             'unitprice' => 1980,
             'image' => 'imageData',
-            'memo' => 'Tシャツの概要です'
+            'memo' => '緑色のシンプルなTシャツ'
         ]);
 
         DB::table('products')->insert([
-            'name' => 'パーカー',
+            'name' => 'PrintShirt',
             'unitprice' => 4980,
             'image' => 'imageData',
-            'memo' => 'パーカーの概要です'
+            'memo' => 'キャラクタープリントの入ったTシャツ'
         ]);
 
         DB::table('products')->insert([
-            'name' => 'サンダル',
+            'name' => 'LightParka',
             'unitprice' => 3980,
             'image' => 'imageData',
-            'memo' => 'サンダルの概要です'
+            'memo' => '軽い素材のパーカー'
         ]);
     }
 }

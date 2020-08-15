@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Prophecy\Call\Call;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('products.index', compact('products'));
+        $categories = Category::all();
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -47,8 +48,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::find($id);
-        return view('products.show', compact('product'));
+        $category = Category::find($id);
+        return view('categories.show', compact('category'));
     }
 
     /**
