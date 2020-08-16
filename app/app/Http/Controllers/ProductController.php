@@ -12,9 +12,19 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
+        $search = $request->input('search');
+
+        $query = Product::query();
+        
+        if (!empty($search)) {
+            $query->where('name', 'LIKE', "%{$search}%")
+                ->orWhere('memo', 'LIKE', "%{$search}%");
+        }
+        
+        $products = $query->get();
+
         return view('products.index', compact('products'));
     }
 
