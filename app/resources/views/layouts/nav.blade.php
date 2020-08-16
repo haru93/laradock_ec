@@ -18,11 +18,22 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('categories.index') }}"><i class="fa fa-book mr-1"></i>カテゴリから探す</a>
 					</li>
+
 				</ul>
 
 				<!-- Right Side Of Navbar -->
 				<ul class="navbar-nav ml-auto">
 					<!-- Authentication Links -->
+
+					<!-- 検索フォーム -->
+						<li class="nav-item">
+							<form method="GET" action="{{ route('products.index') }}" class="form-inline my-2 my-lg-0">
+								<input class="form-control mr-sm-2" name="search" type="search" placeholder="キーワードから探す" aria-label="Search">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">商品検索</button>
+							</form>
+						</li>
+					<!-- 検索フォーム end -->
+
 					@guest
 						<li class="nav-item">
 							<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
